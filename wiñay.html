@@ -1,0 +1,212 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de la Agrupación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo">WIÑAY</div>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#music">Música</a></li>
+            <li><a href="#events">Eventos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Principal -->
+    <section id="home" class="home-section">
+        <h1>Bienvenidos a Wiñay </h1>
+        <p>Conectando culturas a través de la música.</p>
+        <button id="learnMoreBtn">Descubre Nuestra Música</button>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="about-section">
+        <h2>Sobre Nosotros</h2>
+        <p>Wiñay es una agrupación de estudiantes y profesores de la UNTRM. Nos dedicamos</p>
+        <p> a la preservación y promoción de la música tradicional, pertenecemos a la ciudad de Chachapoyas </p>
+        <p>ubicado en el departamento de Amazonas.</p>
+        <p><img src="../Downloads/Imagen de WhatsApp 2024-09-01 a las 23.28.52_a96ef545.jpg" width="800" height="800" longdesc="Ensayo durante preparación de algodón ">&nbsp;</p>
+    </section>
+
+    <!-- Sección Música -->
+    <section id="music" class="music-section">
+        <h2>Nuestra Música</h2>
+        <div class="music-item">
+            <h3>Canción 1</h3>
+            <audio controls>
+                <source src="cancion1.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="music-item">
+            <h3>Canción 2</h3>
+            <audio controls>
+                <source src="cancion2.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </section>
+
+    <!-- Sección Eventos -->
+    <section id="events" class="events-section">
+        <h2>Próximos Eventos</h2>
+        <div class="event">
+            <h3>Evento 1</h3>
+            <p>Fecha: 12 de octubre, 2024</p>
+            <p>Lugar: Plaza Central</p>
+        </div>
+        <div class="event">
+            <h3>Evento 2</h3>
+            <p>Fecha: 15 de noviembre, 2024</p>
+            <p>Lugar: Auditorio Municipal</p>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="contact-section">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+            <label for="name">Nombre:  </label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>&copy; 2024 Nombre de la Agrupación. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style> body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #F4E1C1; /* Color de fondo arena */
+}
+
+/* Barra de Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8B0000; /* Rojo Oscuro */
+    padding: 15px;
+    color: #fff;
+    border-bottom: 3px solid #8B0000; /* Borde inferior rojo */
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Secciones */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #F4E1C1; /* Color de fondo arena */
+    border: 3px solid #8B0000; /* Bordes rojos alrededor de las secciones */
+    margin: 20px; /* Espacio alrededor de las secciones */
+}
+
+.home-section {
+    color: #8B0000; /* Texto en rojo oscuro */
+}
+
+.about-section, .music-section, .events-section, .contact-section {
+    color: #333; /* Texto en gris oscuro */
+}
+
+.music-item, .event {
+    margin: 20px 0;
+}
+
+.music-item h3, .event h3 {
+    color: #8B0000; /* Títulos en rojo oscuro */
+}
+
+/* Formulario de Contacto */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #FFF8DC; /* Fondo ligeramente más claro para el formulario */
+    border: 3px solid #8B0000; /* Bordes rojos alrededor del formulario */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #8B0000; /* Etiquetas en rojo oscuro */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #8B0000; /* Bordes rojos en los campos de entrada */
+    border-radius: 5px;
+    background-color: #F4E1C1; /* Fondo arena en los campos de entrada */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #8B0000; /* Botón en rojo oscuro */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #FFD700; /* Botón cambia a dorado en hover */
+}
+
+/* Pie de Página */
+.footer {
+    background-color: #8B0000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #8B0000; /* Borde superior rojo */
+}</style>
